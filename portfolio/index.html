@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <title>Vidya Madana | Software Engineer & AI</title>
+
+  <meta
+
+    name="description"
+
+    content="Personal portfolio showcasing software engineering, AI, and data-driven projects by a Purdue University Computer Science and Applied Statistics student."
+
+  />
+
+
+
+  <style>
+
+    :root {
+
+      --background: #f7f6f0;
+
+      --surface: #fffefa;
+
+      --text: #30352a;
+
+      --muted: #707565;
+
+      --accent: #68745a;
+
+      --border: #dfe1d4;
+
+      --max-width: 1000px;
+
+    }
+
+
+
+    \* {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+
+    body {
+
+      margin: 0;
+
+      background: var(--background);
+
+      color: var(--text);
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+
+        Roboto, Helvetica, Arial, sans-serif;
+
+      line-height: 1.7;
+
+    }
+
+
+
+    a {
+
+      color: var(--accent);
+
+      text-decoration: none;
+
+    }
+
+
+
+    a:hover {
+
+      text-decoration: underline;
+
+    }
+
+
+
+    .container {
+
+      width: min(100% - 40px, var(--max-width));
+
+      margin: 0 auto;
+
+    }
+
+
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 10;
+
+      background: rgba(247, 246, 240, 0.96);
+
+      border-bottom: 1px solid var(--border);
+
+      backdrop-filter: blur(12px);
+
+    }
+
+
+
+    nav {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 24px;
+
+      padding: 18px 0;
+
+    }
+
+
+
+    .logo {
+
+      color: var(--text);
+
+      font-weight: 700;
+
+      font-size: 1.05rem;
+
+    }
+
+
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 24px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+
+    .nav-links a {
+
+      color: var(--muted);
+
+      font-size: 0.92rem;
+
+    }
+
+
+
+    .hero {
+
+      padding: 110px 0 90px;
+
+    }
+
+
+
+    .eyebrow {
+
+      color: var(--accent);
+
+      font-size: 0.85rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    h1 {
+
+      max-width: 800px;
+
+      margin: 16px 0;
+
+      font-size: clamp(2.7rem, 7vw, 5rem);
+
+      line-height: 1.1;
+
+      letter-spacing: -0.055em;
+
+    }
+
+
+
+    .hero p {
+
+      max-width: 700px;
+
+      color: var(--muted);
+
+      font-size: 1.15rem;
+
+    }
+
+
+
+    .actions {
+
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+      margin-top: 28px;
+
+    }
+
+
+
+    .button {
+
+      display: inline-block;
+
+      padding: 10px 18px;
+
+      border: 1px solid var(--accent);
+
+      border-radius: 6px;
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+    }
+
+
+
+    .button.primary {
+
+      background: var(--accent);
+
+      color: white;
+
+    }
+
+
+
+    section {
+
+      padding: 65px 0;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+
+    .section-heading {
+
+      margin: 0 0 10px;
+
+      font-size: 2rem;
+
+      letter-spacing: -0.035em;
+
+    }
+
+
+
+    .section-intro {
+
+      max-width: 650px;
+
+      margin: 0 0 30px;
+
+      color: var(--muted);
+
+    }
+
+    .section-about-me {
+
+      margin: 0 0 30px;
+
+      color: var(--muted);
+
+    }
+
+
+    .project-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+
+    }
+
+
+
+    .project-card {
+
+      padding: 24px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+    }
+
+
+
+    .project-card h3 {
+
+      margin: 0 0 10px;
+
+      font-size: 1.15rem;
+
+    }
+
+
+
+    .project-card p {
+
+      margin: 0 0 16px;
+
+      color: var(--muted);
+
+    }
+
+
+
+    .tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+    }
+
+
+
+    .tag {
+
+      padding: 3px 9px;
+
+      background: #e7e9de;
+
+      border-radius: 4px;
+
+      color: #566149;
+
+      font-size: 0.8rem;
+
+    }
+
+
+
+    .skills-list {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+    }
+
+
+
+    .skill {
+
+      padding: 8px 13px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 6px;
+
+      background: var(--surface);
+
+    }
+
+
+
+    .contact-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 22px;
+
+      margin-top: 20px;
+
+      font-weight: 600;
+
+    }
+
+
+
+    footer {
+
+      padding: 28px 0;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: 0.9rem;
+
+    }
+
+
+
+
+    h1, .section-heading, .project-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 28px 48px 82px;
+      margin-top: 28px;
+      background: #d8dccd;
+      border: 1px solid #cdd2bf;
+      border-radius: 2px;
+    }
+    
+
+    .hero::after {
+      content: "❧";
+      position: absolute;
+      right: 22px;
+      bottom: -54px;
+      color: rgba(104, 116, 90, 0.13);
+      font-family: Georgia, serif;
+      font-size: 15rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      color: #424a39;
+      font-size: clamp(2.8rem, 6vw, 4.7rem);
+      letter-spacing: -0.035em;
+    }
+
+    .hero p {
+      color: #5d6553;
+    }
+
+    .button {
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    .button.primary {
+      background: #68745a;
+      border-color: #68745a;
+    }
+
+    .project-card {
+      border-radius: 2px;
+      border-color: #dfe1d4;
+      box-shadow: 0 2px 10px rgba(54, 62, 44, 0.035);
+    }
+
+    .project-card h3 {
+      color: #4c5641;
+    }
+
+    .skill {
+      border-radius: 2px;
+      background: #eeefe7;
+    }
+
+    .tag {
+      border-radius: 2px;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding: 56px 24px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+
+        width: min(100% - 32px, var(--max-width));
+
+      }
+
+
+
+      nav {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+      }
+
+
+
+      .nav-links {
+
+        gap: 16px;
+
+      }
+
+
+
+      .hero {
+
+        padding: 75px 0 60px;
+
+      }
+
+
+
+      .project-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      section {
+
+        padding: 48px 0;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <header>
+
+    <nav class="container" aria-label="Main navigation">
+
+      <a class="logo" href="#home">Home</a>
+
+
+
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+    <div class="container">
+
+      <section class="hero" id="home" style="border-top: none;">
+
+
+
+        <img src="/Users/vidya/Desktop/vrmad.github.io/editedheadshot.png" alt="Headshot Photo of Vidya Madana" style="width: 450px; margin-top: 20px;">
+
+        <h1 style="font-size: 48px; font-family: 'Segoe UI'">Vidya Madana</h1>
+
+        <div class="eyebrow">Bachelor of Science in Computer Science and Applied Statistics, Purdue University</div>
+
+        <p>
+
+          I build enterprise AI applications, automate cybersecurity workflows, and develop data-driven web 
+          and mobile products. My work spans AI, backend systems, and data analysis, supported by a strong 
+          foundation in research, analytical problem-solving, and cross-functional collaboration. I'm passionate 
+          about building secure, intelligent products that bridge complex technical challenges and user needs to 
+          deliver meaningful impact.
+
+        </p>
+
+
+
+        <div class="actions">
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/vidya-madana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn ↗</a>
+
+          <a
+            class="button"
+            href="https://www.researchgate.net/profile/Vidya-Madana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >ResearchGate ↗</a>
+
+          <a
+            class="button"
+            href="https://www.dropbox.com/scl/fi/m13dfhd1hsi602y4xf8na/Madana-Resume-digital-copy.pdf?rlkey=hrzhw4ez9ruinpotm2ivincjs&st=vfm9pqj1&dl=0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Resume ↗</a>
+        </div>
+
+      </section>
+
+
+
+      <section id="about">
+
+        <h2 class="section-heading">About me</h2>
+
+
+
+        <p class="section-about-me">
+          I'm interested in how technology, data, and design come together to solve meaningful problems. My experience spans software engineering,
+          artificial intelligence, cybersecurity, and data science, complemented by a background in graphic design, journalism, and editorial leadership.
+        </p>
+
+        <p class="section-about-me">
+          These experiences have shaped how I approach problem-solving from multiple perspectives. My technical
+          background helps me understand complex systems and build reliable solutions, while my experience in
+          design and journalism has taught me to think critically about visual communication, understand different
+          audiences, and turn complex information into clear, accessible content. Through editorial work, I've also developed skills
+          in collaboration, attention to detail, and balancing competing priorities.
+        </p>
+
+        <p class="section-about-me">
+          I enjoy working at the intersection of technical execution and user needs, whether that means developing intelligent applications, analyzing data to uncover insights,
+          or thinking through how people interact with a product. I'm excited by opportunities to combine analytical thinking, creativity, and technical problem-solving to build
+          products that are not only functional and reliable, but also intuitive, accessible, and impactful.
+        </p>
+
+      </section>
+
+
+
+      <section id="projects">
+
+        <h2 class="section-heading">Featured projects</h2>
+
+
+
+        <p class="section-intro">
+
+          A selection of projects exploring AI, application development,
+
+          and data visualization.
+
+        </p>
+
+
+
+        <div class="project-grid">
+
+          <article class="project-card">
+
+            <h3>Enterprise AI Chatbot</h3>
+
+
+
+            <p>
+
+              Developed backend functionality for an internal
+
+              Retrieval-Augmented Generation (RAG) chatbot, including
+
+              MCP server integration, MongoDB, and security-focused
+
+              request handling.
+
+            </p>
+
+
+
+            <div class="tags">
+
+              <span class="tag">RAG</span>
+
+              <span class="tag">MCP</span>
+
+              <span class="tag">MongoDB</span>
+
+              <span class="tag">AI Security</span>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="project-card">
+
+            <h3>Reading Tracker & Forum</h3>
+
+
+
+            <p>
+
+              Built a mobile application for tracking reading progress,
+
+              maintaining reading logs, and participating in book clubs
+
+              and community discussions.
+
+            </p>
+
+
+
+            <div class="tags">
+
+              <span class="tag">React Native</span>
+
+              <span class="tag">Expo</span>
+
+              <span class="tag">ASP.NET Core</span>
+
+              <span class="tag">Cosmos DB</span>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="project-card">
+
+            <h3>Soil & Water Tracking Web App</h3>
+
+
+
+            <p>
+
+              Developed a web application using mapping tools and
+
+              agricultural data APIs to visualize land plots, crop
+
+              health, and soil and water stress indicators.
+
+            </p>
+
+
+
+            <div class="tags">
+
+              <span class="tag">React</span>
+
+              <span class="tag">ArcGIS</span>
+
+              <span class="tag">APIs</span>
+
+              <span class="tag">Data Visualization</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+
+      <section id="skills">
+
+        <h2 class="section-heading">Technical skills</h2>
+
+
+
+        <p class="section-about-me">
+
+          Technologies and tools I've worked with across coursework,
+
+          research, internships, and projects.
+
+        </p>
+
+
+
+        <div class="skills-list">
+
+          <span class="skill">Artificial Intelligence</span>
+
+          <span class="skill">Machine Learning</span>
+
+          <span class="skill">Python</span>
+
+          <span class="skill">Java</span>
+
+          <span class="skill">C/C++</span>
+
+          <span class="skill">C#</span>
+
+          <span class="skill">SQL</span>
+
+          <span class="skill">R</span>
+
+          <span class="skill">JavaScript</span>
+
+          <span class="skill">React</span>
+
+          <span class="skill">React Native</span>
+
+          <span class="skill">ASP.NET Core</span>
+
+          <span class="skill">MongoDB</span>
+
+          <span class="skill">Cosmos DB</span>
+
+          <span class="skill">LangChain</span>
+
+          <span class="skill">LangGraph</span>
+
+          <span class="skill">RAG</span>
+
+          <span class="skill">Git</span>
+
+          <span class="skill">Docker</span>
+
+          <span class="skill">Pandas</span>
+
+          <span class="skill">NumPy</span>
+
+        </div>
+
+      </section>
+
+
+
+      <section id="contact">
+
+        <h2 class="section-heading">Let's connect</h2>
+
+
+
+        <p class="section-about-me">
+
+          I'm always interested in connecting with people working on
+
+          software, AI, and data-driven technology.
+
+        </p>
+
+
+
+        <div class="contact-links">
+
+          <a
+
+            href="https\://www.linkedin.com/in/vidya-madana"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+          >LinkedIn ↗</a>
+
+
+
+          <a href="mailto:vrm24680@gmail.com">Email ↗</a>
+
+
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 Vidya Madana · Built with HTML and CSS
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
